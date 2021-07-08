@@ -13,7 +13,7 @@ function App() {
     <Container maxWidth="lg">
       <AppBar className={classes.appBar} position="static" color="inherit">
         <Typography className={classes.heading} variant="h2" align="center">chrisgram</Typography>
-        <img className={classes.image} src={grams} alt="grams" height="200" />
+        <img className={classes.image} src={grams} alt="grams" height="100" />
 
       </AppBar>
       <Grow in>
