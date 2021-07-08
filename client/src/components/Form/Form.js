@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { TextField, Button, Typography, Paper } from '@material-ui/core';
 import FileBase from 'react-file-base64'
+import { useDispatch } from 'react-redux'
 
 import useStyles from './styles';
+import { createPost } from '../../actions/posts';
 
 const Form = () => {
-
   // Setter for postData
   const [postData, setPostData] = useState ({
     creator: "",
@@ -14,16 +15,25 @@ const Form = () => {
     tags: "",
     selectedFile: "",
   })
-
   const classes = useStyles();
-  const handleSubmit = () => {
+  const dispatch = useDispatch();
+
+  const handleSubmit = (e) => {
+    // prevent refresh
+    e.preventDefault()
+    // dispatch postData from state
+    dispatch(createPost(postData))
+    // sent to reducers 
+  }
+
+  const clear = () => {
 
   }
 
   return (
     <Paper className={classes.paper}>
-      <form autoComplete="off" noValidate className={classes.form} onSubmit={handleSubmit}>
-        <Typography variant="h6">Gram me bro</Typography>
+      <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
+        <Typography variant="h6">Gram me fam</Typography>
         {/* spread open for notes */}
         <TextField 
           name="creator" 
@@ -50,6 +60,8 @@ const Form = () => {
             />
           </div>
           <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
+          <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Delete</Button>
+
       </form>
     </Paper>
   )
