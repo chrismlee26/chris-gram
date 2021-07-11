@@ -18,7 +18,8 @@ function App() {
   // creator in ./actions/posts
   useEffect(() => {
     dispatch(getPosts());
-  }, [dispatch]);
+    // adding currentId to dependencies adds preventDefault()
+  }, [currentId, dispatch]);
   // this is dispatched to ./reducers/posts
 
   return (

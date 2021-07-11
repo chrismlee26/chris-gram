@@ -27,7 +27,7 @@ const Form = ({ currentId, setCurrentId }) => {
   // When post value changes from nothing to post, run FN.
   // if post exist, setPostData & populate with post.
   useEffect(() => {
-    if(post) setPostData(post)
+    if(post) setPostData(post);
   }, [post])
 
   const handleSubmit = (e) => {
@@ -37,22 +37,24 @@ const Form = ({ currentId, setCurrentId }) => {
     if(currentId) {
       dispatch(updatePost(currentId, postData))
     } else {
+    // dispatch postData from state
+    // sent to reducers 
       dispatch(createPost(postData))
     }
-  
-    // dispatch postData from state
-    dispatch(createPost(postData))
-    // sent to reducers 
+    // clear is for the form element
+    clear();
   }
 
+  // clear FN clears the form data after editing
   const clear = () => {
-
+    setCurrentId(null);
+    setPostData({ creator: "", title: "", message: "", tags: "", selectedFile: "" });
   }
 
   return (
     <Paper className={classes.paper}>
       <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-        <Typography variant="h6">Gram me fam</Typography>
+        <Typography variant="h6">{ currentId ? 'Editing gram' : 'Gram me fam' }</Typography>
         {/* spread open for notes */}
         <TextField 
           name="creator" 
@@ -79,7 +81,7 @@ const Form = ({ currentId, setCurrentId }) => {
             />
           </div>
           <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
-          <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Delete</Button>
+          <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear Form</Button>
 
       </form>
     </Paper>
