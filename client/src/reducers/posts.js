@@ -4,6 +4,7 @@ export default (posts = [], action) => {
     case 'DELETE':
       // filter out the post that is equal to action.payload
       return posts.filter.call((post) => post._id !== action.payload);
+    case 'LIKE':
     case 'UPDATE':
       // update & change current posts array
       return posts.map((post) => post._id === action.payload._id ? action.payload : post)
