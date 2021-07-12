@@ -21,7 +21,7 @@ const Post = ({ post, setCurrentId }) => {
       <div className={classes.overlay}>
         <Typography variant="h6" style={{color: 'white'}}>{post.creator}</Typography>
         {/* moment library uses date lib */}
-        <Typography variant="body2" style={{color: 'white'}}>{moment(post.createdAt).fromNow()}</Typography>
+        <Typography variant="body2" style={{color: 'grey'}}>{moment(post.createdAt).fromNow()}</Typography>
       </div>
       {/* This is the ... button */}
       <div className={classes.overlay2}>
@@ -40,7 +40,7 @@ const Post = ({ post, setCurrentId }) => {
       </div>
       <Typography className={classes.title} variant="h6" gutterBottom>{post.title}</Typography>
       <CardContent>
-        <Typography variant="body2" gutterBottom>{post.message}</Typography>
+        <Typography variant="body2" color="textSecondary" component="p" gutterBottom={true}>{post.message}</Typography>
       </CardContent>
       <CardActions className={classes.cardActions}>
         <Button size="small" color="primary" onClick={() => dispatch(likePost(post._id))}>

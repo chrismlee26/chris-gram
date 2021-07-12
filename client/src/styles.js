@@ -1,6 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export default makeStyles(() => ({
+// theme prop for responsive in mob below
+export default makeStyles((theme) => ({
   appBar: {
     borderRadius: 15,
     margin: '30px 0',
@@ -14,5 +15,11 @@ export default makeStyles(() => ({
   },
   image: {
     marginLeft: '15px',
+  },
+  // this is breakpoints to place the input form above on mobile
+  [theme.breakpoints.down('sm')]: {
+    mainContainer: {
+      flexDirection: "column-reverse",
+    },
   },
 }));
