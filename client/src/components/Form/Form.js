@@ -54,7 +54,7 @@ const Form = ({ currentId, setCurrentId }) => {
   return (
     <Paper className={classes.paper}>
       <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-        <Typography variant="h6">{ currentId ? 'Editing gram' : 'Gram me fam' }</Typography>
+        <Typography variant="h4">{ currentId ? 'editing...' : 'gram me fam' }</Typography>
         {/* spread open for notes */}
         <TextField 
           name="creator" 
@@ -81,7 +81,7 @@ const Form = ({ currentId, setCurrentId }) => {
             />
           </div>
           <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
-          <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear Form</Button>
+          <Button className={classes.buttonSubmit} variant="contained" color="default" size="small" onClick={clear} fullWidth>Clear Form</Button>
 
       </form>
     </Paper>

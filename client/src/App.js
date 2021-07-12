@@ -25,8 +25,9 @@ function App() {
   return (
     <Container maxWidth="lg">
       <AppBar className={classes.appBar} position="static" color="inherit">
+        <img className={classes.image} src={grams} alt="grams" />
         <Typography className={classes.heading} variant="h2" align="center">chrisgram</Typography>
-        <img className={classes.image} src={grams} alt="grams" height="100" />
+        
       </AppBar>
       <Grow in>
         <Container>
