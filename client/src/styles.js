@@ -18,6 +18,7 @@ export default makeStyles((theme) => ({
   },
   image: {
     marginLeft: '15px',
+    transition: 'opacity 1s ease-in-out'
   },
   // this is breakpoints to place the input form above on mobile
   [theme.breakpoints.down('sm')]: {
