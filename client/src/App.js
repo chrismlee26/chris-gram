@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core';
+import { Container, AppBar, Typography, Grow, Grid, InputBase } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
 
 import { getPosts } from './actions/posts';
-import Posts from './components/Posts/Posts'
-import Form from './components/Form/Form'
-import grams from './images/grams.jpeg'
-import useStyles from './styles'
+import Posts from './components/Posts/Posts';
+import Form from './components/Form/Form';
+import grams from './images/grams.jpeg';
+import SearchIcon from '@material-ui/icons/Search';
+
+
+import useStyles from './styles';
+
+
 
 function App() {
   // currentId & setCurrentId are sent as props to Form.js & Posts.js
@@ -27,7 +32,23 @@ function App() {
       <AppBar className={classes.appBar} position="static" color="inherit">
         <img className={classes.image} src={grams} alt="grams" />
         <Typography className={classes.heading} variant="h2" align="center">chrisgram</Typography>
-        
+
+        <div className={classes.search}>
+          <div className={classes.searchIcon}>
+
+            <SearchIcon />
+            <InputBase
+              PLACEHOLDER="SEARCH..."
+              classes={{
+                root: classes.inputRoot,
+                input: classes.inputInput,
+              }}
+              inputProps={{ 'aria-label': 'search' }}
+            />
+
+          </div>
+        </div>
+
       </AppBar>
       <Grow in>
         <Container>

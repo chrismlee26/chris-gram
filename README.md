@@ -29,8 +29,13 @@ npm i for dependencies
 ## Planned Updates
 
 1. Deployment
-2. Reduce props drilling with Redux {store}
+2. Remove props drilling with Redux {store}
 3. CSS changes
 4. Multiple Pages
 5. User Accounts / Sign-In / Auth with JWT
 6. Comments for photos
+
+## Usage
+
+- Front-End is in folder Client
+- Back-End is in folder Server
