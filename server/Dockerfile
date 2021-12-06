@@ -1,16 +1,14 @@
-FROM node:10.16-alpine
+FROM node:17-alpine
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-ENV PATH /usr/src/app/node_modules/.bin:$PATH
-
 COPY package*.json .
 
-RUN npm install
+RUN npm install --silent
 
 COPY . .
 
 EXPOSE 5000
 
-CMD ["npm", "start"]
+CMD ["npm","start"]
