@@ -4,9 +4,11 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/chrismlee26/chris-gram)
 ![GitHub repo size](https://img.shields.io/github/repo-size/chrismlee26/chris-gram)
 
-- Image Size
-- Build Status
-- Website Monitoring
+- Add Badges for
+
+  - Image Size
+  - Build Status
+  - Website Monitoring
 
 - A Full stack Web Application
 - Built in React+Redux, MongoDB, Express, Node
@@ -15,18 +17,25 @@
 ## Description
 
 - chrisgram is image upload web application and social media platform allowing users to upload, share and like photos.
+- Now containerized with Docker Compose & CapRover (PaaS)
 
 ## Build Container
 
-`TBA`
+```
+TBA
+```
 
-# Run Container
+## Run Container
 
-- TBA
+```
+TBA
+```
 
 ## Install
 
-`npm i for dependencies`
+```
+npm i for dependencies
+```
 
 ## Dependencies
 
