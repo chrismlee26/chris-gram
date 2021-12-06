@@ -17,7 +17,8 @@
 ## Description
 
 - chrisgram v0.2.0 is image upload web application and social media platform allowing users to upload, share and like photos.
-- Now containerized with Docker Compose & CapRover (PaaS)
+- Now containerized with Docker Compose
+- To be deployed to CapRover (PaaS)
 
 - Front-End is hosted on http://localhost:3000
 - Back-End is hosted on http://localhost:5000
@@ -42,13 +43,13 @@ npm start
 To build back-end (node) container, type:
 
 ```
-docker build -t chris-gram-server
+docker build -t chrisgram-server
 ```
 
-To build Front-End (React) Container, type:
+To build front-end (React) container, type:
 
 ```
-docker build -t chris-gram-client
+docker build -t chrisgram-client
 ```
 
 To build the entire application, type:
@@ -57,16 +58,24 @@ To build the entire application, type:
 docker-compose build
 ```
 
-To start the multi-container system, type:
+## Run Container
+
+To run the multi-container system, type:
 
 ```
 docker-compose up
 ```
 
-## Run Container
+To run the back-end (node), type:
 
 ```
-TBA
+docker run -p 5000:5000 chrisgram-client
+```
+
+To run the front-end (React), type:
+
+```
+docker run -p 3000:3000 chrisgram-client
 ```
 
 ## Install Dependencies
@@ -75,7 +84,7 @@ TBA
 npm i
 ```
 
-## Packages and Dependencies
+## Installed Packages and Dependencies
 
 - React + Redux + Thunk
 - axios
@@ -86,7 +95,8 @@ npm i
 
 ## Planned Updates
 
-1. Containerize with Docker
+✅ Containerize with Docker
+
 2. Deployment with CapRover
 3. Remove props drilling with Redux {store}
 4. Add CSS styling
