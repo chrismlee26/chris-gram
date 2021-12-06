@@ -11,7 +11,7 @@
   - Website Monitoring
 
 - A Full stack Web Application
-- Built in React+Redux, MongoDB, Express, Node
+- Built in React+Redux, MongoDB, Express, Node (MERN)
 - UI in MaterialUI
 
 ## Description
@@ -31,15 +31,13 @@ TBA
 TBA
 ```
 
-## Install
+## Install Dependencies
 
 ```
 npm i
 ```
 
-To install dependencies
-
-## Dependencies
+## Packages and Dependencies
 
 - React + Redux + Thunk
 - axios
