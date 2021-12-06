@@ -1,9 +1,9 @@
 FROM node:10.16-alpine
 
-RUN mkdir -p /usr/dev/courses/few2.3/chris-gram
-WORKDIR /usr/dev/courses/few2.3/chris-gram
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-COPY ./package.json ./
+COPY ./package.json .
 
 RUN npm install
 
