@@ -16,7 +16,7 @@
 
 ## Description
 
-- chrisgram is image upload web application and social media platform allowing users to upload, share and like photos.
+- chrisgram v0.2.0 is image upload web application and social media platform allowing users to upload, share and like photos.
 - Now containerized with Docker Compose & CapRover (PaaS)
 
 ## Build Container
@@ -34,8 +34,10 @@ TBA
 ## Install
 
 ```
-npm i for dependencies
+npm i
 ```
+
+To install dependencies
 
 ## Dependencies
 
@@ -48,14 +50,29 @@ npm i for dependencies
 
 ## Planned Updates
 
-1. Deployment
-2. Remove props drilling with Redux {store}
-3. CSS changes
-4. Multiple Pages
-5. User Accounts / Sign-In / Auth with JWT
-6. Comments for photos
+1. Containerize with Docker
+2. Deployment with CapRover
+3. Remove props drilling with Redux {store}
+4. Add CSS styling
+5. Authentication with JWT
+6. User Accounts & Sign-In
+7. Multiple Pages
+8. Comments for photos
 
 ## Usage
 
-- Front-End is in folder Client
-- Back-End is in folder Server
+- Back-End is in folder Server. Navigate to /server/ and type
+
+```
+npm start
+```
+
+to run express API & mongo server
+
+- Front-End is in folder Client. Navigate to /client/ and type
+
+```
+npm start
+```
+
+to run react web application
