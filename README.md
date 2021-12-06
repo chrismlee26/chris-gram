@@ -19,9 +19,23 @@
 - chrisgram v0.2.0 is image upload web application and social media platform allowing users to upload, share and like photos.
 - Now containerized with Docker Compose & CapRover (PaaS)
 
-- Front-End is hosted on localhost port 3000
-- Back-End is hosted on localhost port 5000
-- MongoDB server is running on localhost port 27017
+- Front-End is hosted on http://localhost:3000
+- Back-End is hosted on http://localhost:5000
+- MongoDB server is running on http://localhost:27017
+
+## Run Application
+
+Back-End is in folder Server. To run the node/express server, navigate to /server/ and type:
+
+```
+npm start
+```
+
+Front-End is in folder Client. To run the React web application, navigate to /client/ and type:
+
+```
+npm start
+```
 
 ## Build Container
 
@@ -80,17 +94,3 @@ npm i
 6. User Accounts & Sign-In
 7. Multiple Pages
 8. Comments for photos
-
-## Usage
-
-Back-End is in folder Server. To run the express API & mongo server, navigate to /server/ and type:
-
-```
-npm start
-```
-
-Front-End is in folder Client. To run the React web application, navigate to /client/ and type:
-
-```
-npm start
-```
