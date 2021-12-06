@@ -1,9 +1,8 @@
-FROM node:17.0.1
+FROM node:10.16-alpine
 
 WORKDIR /usr/dev/courses/few2.3/chris-gram
 
 COPY ./package.json ./
-COPY ./yarn.lock ./
 
 RUN npm install
 

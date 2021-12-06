@@ -1,12 +1,12 @@
-FROM node:17.0.1
+FROM node:10.16-alpine
 
+RUN mkdir -p /usr/dev/courses/few2.3/chris-gram
 WORKDIR /usr/dev/courses/few2.3/chris-gram
 
 COPY ./package.json ./
-COPY ./yarn.lock ./
 
 RUN npm install
 
 EXPOSE 5000
 
-CMD ["index.js"]
+CMD ["npm", "start"]
