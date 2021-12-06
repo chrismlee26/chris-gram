@@ -59,18 +59,14 @@ npm i
 
 ## Usage
 
-- Back-End is in folder Server. Navigate to /server/ and type
+- Back-End is in folder Server. To run express API & mongo server, navigate to /server/ and type
 
 ```
 npm start
 ```
 
-to run express API & mongo server
-
-- Front-End is in folder Client. Navigate to /client/ and type
+- Front-End is in folder Client. To run react web application, navigate to /client/ and type
 
 ```
 npm start
 ```
-
-to run react web application
