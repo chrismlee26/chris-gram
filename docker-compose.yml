@@ -1,31 +1,33 @@
 version: '3.7'
 
 services:
-  server:
-    build:
-      context: ./server
-      dockerfile: Dockerfile
-    image: chrisgram-server
-    container_name: chrisgram-node-server
-    command: /usr/src/app/node_modules/.bin/nodemon server.js
-    volumes: 
-      - ./server/:/usr/src/app
-      - usr/src/app/node_modules
-    ports:
-      - "5000:5000"
-    depends_on:
-      - mongo
-    env_file: ./server/.env
-    environment:
-      - NODE_ENV=development
-    networks:
-      - app-network
   mongo:
     image: mongo
     volumes:
       - data-volume:/data/db
     ports:
       - "27017:27017"
+      # - $MONGODB_LOCAL_PORT:$MONGODB_DOCKER_PORT
+    networks:
+      - app-network
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    image: chrisgram-server
+    container_name: chrisgram-node-server
+    # command: /usr/src/app/node_modules/.bin/nodemon server.js
+    # volumes: 
+    #   - ./server/:/usr/src/app
+    #   - usr/src/app/node_modules
+    ports:
+      - "5000:5000"
+      # - $BACKEND_LOCAL_PORT:$BACKEND_DOCKER_PORT
+    depends_on:
+      - mongo
+    env_file: ./server/.env
+    environment:
+      - NODE_ENV=development
     networks:
       - app-network
   client:
@@ -34,10 +36,6 @@ services:
       dockerfile: Dockerfile
     image: chrisgram-client
     container_name: chrisgram-react-client
-    command: npm start
-    volumes:
-      - ./client/:/usr/app
-      - usr/app/node_modules
     depends_on:
       - server
     ports:
