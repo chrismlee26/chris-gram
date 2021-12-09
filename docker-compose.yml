@@ -3,36 +3,25 @@ version: '3.7'
 services:
   mongo:
     image: mongo
-    # container_name: chrisdb
     restart: unless-stopped
     volumes:
       - data-volume:/data/db
     ports:
       - "27017:27017"
-      # - $MONGODB_LOCAL_PORT:$MONGODB_DOCKER_PORT
-    # networks:
-    #   - app-network
   server:
     build:
       context: ./server
       dockerfile: Dockerfile
     image: chrisgram-server
     container_name: chrisgram-node-server
-    # command: /usr/src/app/node_modules/.bin/nodemon server.js
-    # volumes: 
-    #   - ./server/:/usr/src/app
-    #   - usr/src/app/node_modules
     ports:
       - "5000:5000"
-      # - $BACKEND_LOCAL_PORT:$BACKEND_DOCKER_PORT
     depends_on:
       - mongo
     restart: unless-stopped
     env_file: ./server/.env
     environment:
       - NODE_ENV=development
-    # networks:
-    #   - app-network
   client:
     build:
       context: ./client
@@ -44,12 +33,5 @@ services:
     restart: unless-stopped
     ports:
       - "3000:3000"
-    # networks:
-    #   - app-network
-  
-# networks:
-#   app-network:
-#     driver: bridge
-
 volumes:
   data-volume:

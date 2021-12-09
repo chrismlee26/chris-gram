@@ -1,7 +1,8 @@
 import axios from 'axios';
 
-const url = 'http://localhost:5000/posts'
-// const url = 'actual_link.herokuapp.com/posts'
+const BASE_URL = process.env.NODE_ENV === "production" ? "https://chrisgram-server.dev.chrislee.wtf" : "http://localhost:5000";
+const url = BASE_URL + "/posts"
+
 
 
 export const fetchPosts = () => axios.get(url);
