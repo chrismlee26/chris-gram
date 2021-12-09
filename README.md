@@ -3,40 +3,24 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/chrismlee26/chris-gram)
 ![GitHub top language](https://img.shields.io/github/languages/top/chrismlee26/chris-gram)
 ![GitHub repo size](https://img.shields.io/github/repo-size/chrismlee26/chris-gram)
-
-- Add Badges for
-
-  - Image Size
-  - Build Status
-  - Website Monitoring
+![Docker Image Size (tag)](https://img.shields.io/docker/image-size/chrismlee26/chris-gram/latest)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/chrismlee26/chris-gram)
+![Website](https://img.shields.io/website?down_color=lightgrey&down_message=offline&up_color=blue&up_message=online&url=https%3A%2F%2Fchrisgram-client.dev.chrislee.wtf)
 
 - A Full stack Web Application
 - Built in React+Redux, MongoDB, Express, Node (MERN)
 - UI in MaterialUI
+- Deployed with Docker -> CapRover -> DigitalOcean
 
 ## Description
 
-- chrisgram v0.2.0 is image upload web application and social media platform allowing users to upload, share and like photos.
+- chrisgram v0.3.1 is image upload web application and social media platform allowing users to upload, share and like photos.
 - Now containerized with Docker Compose
-- To be deployed to CapRover (PaaS)
+- Deployed to CapRover (PaaS) and Digital Ocean (VM)
 
-- Front-End is hosted on http://localhost:3000
-- Back-End is hosted on http://localhost:5000
-- MongoDB server is running on http://localhost:27017
-
-## Run Application
-
-Back-End is in folder Server. To run the node/express server, navigate to /server/ and type:
-
-```
-npm start
-```
-
-Front-End is in folder Client. To run the React web application, navigate to /client/ and type:
-
-```
-npm start
-```
+- Front-End is hosted on https://chrisgram-client.dev.chrislee.wtf // http://localhost:3000
+- Back-End is hosted on https://chrisgram-server.dev.chrislee.wtf // http://localhost:5000
+- MongoDB server is running on http://localhost:27017 // port 27017
 
 ## Build Container
 
@@ -96,11 +80,25 @@ npm i
 ## Planned Updates
 
 ✅ Containerize with Docker
+✅ Deployment with CapRover
 
-2. Deployment with CapRover
 3. Remove props drilling with Redux {store}
 4. Add CSS styling
 5. Authentication with JWT
 6. User Accounts & Sign-In
 7. Multiple Pages
 8. Comments for photos
+
+## Run Application
+
+Back-End is in folder Server. To run the node/express server, navigate to /server/ and type:
+
+```
+npm start
+```
+
+Front-End is in folder Client. To run the React web application, navigate to /client/ and type:
+
+```
+npm start
+```
