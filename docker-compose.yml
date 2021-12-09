@@ -3,13 +3,15 @@ version: '3.7'
 services:
   mongo:
     image: mongo
+    # container_name: chrisdb
+    restart: unless-stopped
     volumes:
       - data-volume:/data/db
     ports:
       - "27017:27017"
       # - $MONGODB_LOCAL_PORT:$MONGODB_DOCKER_PORT
-    networks:
-      - app-network
+    # networks:
+    #   - app-network
   server:
     build:
       context: ./server
@@ -25,11 +27,12 @@ services:
       # - $BACKEND_LOCAL_PORT:$BACKEND_DOCKER_PORT
     depends_on:
       - mongo
+    restart: unless-stopped
     env_file: ./server/.env
     environment:
       - NODE_ENV=development
-    networks:
-      - app-network
+    # networks:
+    #   - app-network
   client:
     build:
       context: ./client
@@ -38,17 +41,15 @@ services:
     container_name: chrisgram-react-client
     depends_on:
       - server
+    restart: unless-stopped
     ports:
       - "3000:3000"
-    networks:
-      - app-network
+    # networks:
+    #   - app-network
   
-networks:
-  app-network:
-    driver: bridge
+# networks:
+#   app-network:
+#     driver: bridge
 
 volumes:
   data-volume:
-  node_modules:
-  web-root:
-    driver: local
