@@ -10,17 +10,20 @@
 - A Full stack Web Application
 - Built in React+Redux, MongoDB, Express, Node (MERN)
 - UI in MaterialUI
-- Deployed with Docker -> CapRover -> DigitalOcean
+- ~~Deployed with Docker -> CapRover -> DigitalOcean~~
+- Currently refactoring code from MERN stack to Next.js
+- Back-end to be moved to Supabase
+- Code to be hosted on [chrislee.wtf](https://chrislee.wtf)
 
 ## Description
 
 - chrisgram v0.3.1 is image upload web application and social media platform allowing users to upload, share and like photos.
 - Now containerized with Docker Compose
-- Deployed to CapRover (PaaS) and Digital Ocean (VM)
+- ~~Deployed to CapRover (PaaS) and Digital Ocean (VM)~~
 
-- Front-End is hosted on https://chrisgram-client.dev.chrislee.wtf // http://localhost:3000
-- Back-End is hosted on https://chrisgram-server.dev.chrislee.wtf // http://localhost:5000
-- MongoDB server is running on http://localhost:27017 // port 27017
+- ~~Front-End is hosted on https://chrisgram-client.dev.chrislee.wtf // http://localhost:3000~~
+- ~~Back-End is hosted on https://chrisgram-server.dev.chrislee.wtf // http://localhost:5000~~
+- ~~MongoDB server is running on http://localhost:27017 // port 27017~~
 
 ## Build Container
 
