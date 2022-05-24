@@ -11,9 +11,9 @@
 - Built in React+Redux, MongoDB, Express, Node (MERN)
 - UI in MaterialUI
 - ~~Deployed with Docker -> CapRover -> DigitalOcean~~
-- Currently refactoring code from MERN stack to Next.js
-- Back-end to be moved to Supabase
-- Code to be hosted on [chrislee.wtf](https://chrislee.wtf)
+  - Removed deployment, code refactoring to serverless.
+<br>
+- View serverless v2 [here](https://github.com/chrismlee26/chris-gram-next)
 
 ## Description
 
@@ -84,7 +84,6 @@ npm i
 
 ✅ Containerize with Docker
 ✅ Deployment with CapRover
-
 3. Remove props drilling with Redux {store}
 4. Add CSS styling
 5. Authentication with JWT
